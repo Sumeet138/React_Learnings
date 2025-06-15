@@ -78,6 +78,23 @@ h2 {
   background-color: #3700b3;
 }
 
+.cart-item {
+  padding: 5px;
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 5px;
+}
+.cart-item button {
+  background-color: #d32f2f;
+  border: none;
+  padding: 5px;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
 .hidden {
   display: none;
 }
