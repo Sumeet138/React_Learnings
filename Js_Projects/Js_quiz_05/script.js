@@ -13,11 +13,13 @@ document.addEventListener("DOMContentLoaded", () => {
       question: "What is the capital of France?",
       choices: ["Paris", "London", "Berlin", "Madrid"],
       answer: "Paris",
+      marks: 10,
     },
     {
       question: "Which planet is known as the Red Planet?",
       choices: ["Mars", "Venus", "Jupiter", "Saturn"],
       answer: "Mars",
+      marks: 20,
     },
     {
       question: "Who wrote 'Hamlet'?",
@@ -28,6 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "Mark Twain",
       ],
       answer: "William Shakespeare",
+      marks: 30,
     },
   ];
 
@@ -80,7 +83,7 @@ document.addEventListener("DOMContentLoaded", () => {
   function selectedAnswer(choice) {
     const correctAnswer = questions[currentQuestionIndex].answer;
     if (choice === correctAnswer) {
-      score++;
+      score += questions[currentQuestionIndex].marks;
     }
     nextBtn.classList.remove("hidden");
   }
@@ -88,6 +91,9 @@ document.addEventListener("DOMContentLoaded", () => {
   function showResult() {
     questionContainer.classList.add("hidden");
     resultContainer.classList.remove("hidden");
-    scoreDisplay.textContent = `${score} out of ${questions.length}`;
+    scoreDisplay.textContent = `${score} out of ${questions.reduce(
+      (acc, q) => acc + q.marks,
+      0
+    )}`;
   }
 });
