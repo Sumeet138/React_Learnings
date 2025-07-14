@@ -3,7 +3,7 @@ import { Link, NavLink } from "react-router-dom"
 
 export default function Header() {
   return (
-    <header className="fixed top-4 left-4 right-4 z-50">
+    <header className="Sticky top-4 left-4 right-4 z-50">
       {/* Glassmorphism container with backdrop blur and gradient */}
       <nav className="bg-gradient-to-r from-slate-900/80 via-slate-800/70 to-slate-900/80 backdrop-blur-md border border-white/10 px-4 lg:px-6 py-2.5 shadow-lg shadow-blue-500/20 rounded-2xl">
         {/* Blue glow effect overlay */}
@@ -78,6 +78,54 @@ export default function Header() {
                   }
                 >
                   <span className="relative z-10">About</span>
+                  {/* Animated underline effect */}
+                  <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-orange-400 to-orange-600 group-hover:w-full transition-all duration-300"></div>
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/contact"
+                  className={({ isActive }) =>
+                    `relative block py-2 pr-4 pl-3 duration-300 border-b border-transparent lg:border-0 lg:p-0 transition-all group ${
+                      isActive
+                        ? "text-orange-400 lg:bg-transparent"
+                        : "text-white/80 hover:text-orange hover:bg-white/10 "
+                    }`
+                  }
+                >
+                  <span className="relative z-10">Contact</span>
+                  {/* Animated underline effect */}
+                  <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-orange-400 to-orange-600 group-hover:w-full transition-all duration-300"></div>
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/github"
+                  className={({ isActive }) =>
+                    `relative block py-2 pr-4 pl-3 duration-300 border-b border-transparent lg:border-0 lg:p-0 transition-all group ${
+                      isActive
+                        ? "text-orange-400 lg:bg-transparent"
+                        : "text-white/80 hover:text-orange hover:bg-white/10 "
+                    }`
+                  }
+                >
+                  <span className="relative z-10">Github</span>
+                  {/* Animated underline effect */}
+                  <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-orange-400 to-orange-600 group-hover:w-full transition-all duration-300"></div>
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/user"
+                  className={({ isActive }) =>
+                    `relative block py-2 pr-4 pl-3 duration-300 border-b border-transparent lg:border-0 lg:p-0 transition-all group ${
+                      isActive
+                        ? "text-orange-400 lg:bg-transparent"
+                        : "text-white/80 hover:text-orange hover:bg-white/10 "
+                    }`
+                  }
+                >
+                  <span className="relative z-10">User</span>
                   {/* Animated underline effect */}
                   <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-orange-400 to-orange-600 group-hover:w-full transition-all duration-300"></div>
                 </NavLink>
